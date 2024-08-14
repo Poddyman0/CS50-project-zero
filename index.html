@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link href="indexstylesheet.css" rel="stylesheet"/>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('luckyButton').addEventListener('click', function (event) {
+                event.preventDefault();
+                let luckyQuery = document.querySelector('input[name="q"]').value;
+                window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(luckyQuery) + '&btnI';
+            })
+        })
+    </script>
+</head>
+    <br>
+        <div id="navbuttons">
+            <a  href="/googleadvanced.html">
+                <button id="advancedSearch">Advanced Search</button>
+            </a>
+            <a href="/googleimg.html">
+                <button id="imageSearch">Image Search</button>
+            </a>
+        </div>
+        <form action="https://www.google.com/search">
+            <input type="text" name="q">
+            <br>
+            <br>
+            <input type="submit" value="Google Search">
+            <input type="submit" id="luckyButton" value="I'm Feeling Lucky">
+        </form>
+    </body>
+</html>

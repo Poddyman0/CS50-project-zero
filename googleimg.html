@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immage Search</title>
+    <link href="googleimgstylesheet.css" rel="stylesheet"/>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            window.location.href = `https://www.google.com/search?tbm=isch&q=${text.value}`;
+            })
+        })
+    </script>
+</head>
+    <body>
+        <a href="/index.html">
+            <button id="search">Google Search</button>
+        </a>
+        <form>
+            <input type="text" name="q">
+            <input id="submit" type="submit" value="ImmageSearch">
+        </form>
+    </body>
+</html>

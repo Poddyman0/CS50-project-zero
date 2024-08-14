@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Search</title>
+    <link href="googleadvancedstylesheet.css" rel="stylesheet"/>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                window.location.href = `https://www.google.com/search?as_q=${all.value}&as_epq=${exact.value}&as_oq=${any.value}&as_eq=${none.value}&as_nlo=&as_nhi=&lr=&cr=&as_qdr=${all.value}&as_sitesearch=&as_occt=${any.value}&as_filetype=&tbs=`
+            })
+        })
+    </script>
+</head>
+    <body>
+        <a href="/index.html">
+            <button id="search" >Google Search</button>
+        </a>
+        <form>
+            <h3>Find Pages With...</h3>
+            <label for="all" class="left">all these words
+                <input class="right" id="all" name="all" type="text" name="q"></input>
+            </label>
+            <br>
+            <br>
+            <label for="exact" class="left">this exact word or phrase
+                <input class="right" id="exact" name="exact" type="text" name="q"></input>
+            </label>
+            <br>
+            <br>
+            <label for="any" class="left">any of these words
+                <input class="right" id="any" name="any" type="text" name="q"></input>
+            </label>
+            <br>
+            <br>
+            <label for="none" class="left">none of these words
+                <input class="right" id="none" name="none" type="text" name="q"></input>
+            </label>
+            <br>
+            <br>
+            <input id="submit" type="submit" value="Advanced Search">
+        </form>
+    </body>
+</html>
